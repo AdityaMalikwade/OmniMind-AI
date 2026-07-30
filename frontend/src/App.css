@@ -1,0 +1,204 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #050816;
+  color: white;
+}
+
+
+.app {
+  min-height: 100vh;
+}
+
+
+/* Navbar */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 60px;
+}
+
+
+nav h2 {
+  color: #00e5ff;
+  font-size: 28px;
+}
+
+
+nav button {
+  margin-left: 15px;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 25px;
+  background: #00e5ff;
+  color: #050816;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+
+nav button:hover {
+  transform: scale(1.05);
+  background: white;
+}
+
+
+/* Hero Section */
+
+.hero {
+  width: 100%;
+  padding: 80px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+
+.hero h1 {
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  font-weight: 800;
+  line-height: 1.1;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  background: linear-gradient(
+    90deg,
+    #00d4ff,
+    #8b5cf6
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+.hero p {
+
+  font-size: 20px;
+  color: #b0b0b0;
+
+  max-width: 650px;
+  margin: 25px auto;
+
+  line-height: 1.6;
+
+}
+
+
+/* Search Box */
+
+.search-box {
+
+  margin-top: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+.search-box input {
+
+  width: 500px;
+
+  padding: 18px 25px;
+
+  border-radius: 35px;
+
+  border: 1px solid #333;
+
+  outline: none;
+
+  font-size: 17px;
+
+  background: #111827;
+
+  color: white;
+
+}
+
+
+.search-box input::placeholder {
+
+  color: #888;
+
+}
+
+
+.search-box button {
+
+  margin-left: 15px;
+
+  padding: 18px 35px;
+
+  border-radius: 35px;
+
+  border: none;
+
+  background: #8b5cf6;
+
+  color: white;
+
+  font-size: 16px;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+
+}
+
+
+.search-box button:hover {
+
+  background: #6d28d9;
+
+  transform: scale(1.05);
+
+}
+
+
+
+/* Upload Button */
+
+.upload {
+
+  margin-top: 40px;
+
+}
+
+
+.upload button {
+
+  padding: 15px 35px;
+
+  border-radius: 30px;
+
+  border: none;
+
+  background: #00e5ff;
+
+  color: #050816;
+
+  font-size: 16px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+
+}
+
+
+.upload button:hover {
+
+  background: white;
+
+  transform: scale(1.05);
+
+}
