@@ -131,27 +131,49 @@ export default function Dashboard() {
           const localUrl = backendUrl || URL.createObjectURL(file);
 
           const newDocument: LocalDocument = {
-            id:
-              response?.id ||
-              response?.document_id ||
-              `local-${Date.now()}-${Math.random()}`,
+  id:
+    response?.id ||
+    response?.document_id ||
+    `local-${Date.now()}-${Math.random()}`,
 
-            filename: file.name,
+  user_id: response?.user_id || "",
 
-            file_type:
-              response?.file_type ||
-              file.type ||
-              file.name.split(".").pop() ||
-              "file",
+  filename: file.name,
 
-            summary:
-              response?.summary ||
-              "",
+  storage_path:
+    response?.storage_path ||
+    response?.path ||
+    "",
 
-            localUrl,
+  file_type:
+    response?.file_type ||
+    "other",
 
-            originalFile: file,
-          };
+  file_size: file.size,
+
+  mime_type: file.type || undefined,
+
+  summary: response?.summary || "",
+
+  status:
+    response?.status ||
+    "indexed",
+
+  error_message: response?.error_message,
+
+  metadata: response?.metadata,
+
+  created_at:
+    response?.created_at ||
+    new Date().toISOString(),
+
+  updated_at:
+    response?.updated_at ||
+    new Date().toISOString(),
+
+  localUrl,
+  originalFile: file,
+};
 
           /*
            * Immediately UI madhe file add karto.
