@@ -37,8 +37,8 @@ class VectorStore:
     def _init_embeddings(self):
         try:
             from sentence_transformers import SentenceTransformer
-            self.embedding_model = SentenceTransformer(settings.EMBEDDING_MODEL_NAME)
-            print(f"SentenceTransformers embedding model loaded: {settings.EMBEDDING_MODEL_NAME}")
+            self.embedding_model = None
+            print("SentenceTransformers embedding model will be loaded when needed.")
         except Exception as e:
             print(f"Warning: SentenceTransformers model fallback: {e}")
             self.embedding_model = None
