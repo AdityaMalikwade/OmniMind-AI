@@ -1,10 +1,10 @@
 import { DocumentItem, UserProfile, SearchResult } from '../types';
 
-const API_BASE = '/api/v1';
+const API_BASE = import.meta.env.VITE_API_URL;
 
 export interface RAGResponse {
   query: string;
-  answer: str;
+  answer: string;
   sources: Array<{ source_id: number; filename: string; similarity_score: number }>;
   confidence: number;
 }
